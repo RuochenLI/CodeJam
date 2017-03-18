@@ -21,4 +21,12 @@
     </build>
     <name>Google Code Jam</name>
     <url>https://github.com/RuochenLI/CodeJam</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+    </dependencies>
 </project>
