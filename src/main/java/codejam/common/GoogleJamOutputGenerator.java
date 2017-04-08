@@ -13,11 +13,11 @@ import java.util.Scanner;
 public class GoogleJamOutputGenerator {
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        String packagePath = "codejam.codejam2016.qualificationRound.";
+        String packagePath = "codejam.codejam2017.qualificationRound.";
         //Add class name to be execute
-        String className = "CountingSheep";
+        String className = "OversizedPancakeFlipper";
         //Add input file name
-        String input = "A-small-practice.in";
+        String input = "A-small-attempt0.in";
 
         Preconditions.checkArgument(!className.isEmpty(), "class name cannot be empty");
         Preconditions.checkArgument(!input.isEmpty(), "input file name cannot be empty");
@@ -31,6 +31,7 @@ public class GoogleJamOutputGenerator {
         ) {
             int cases = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < cases; i++) {
+                System.out.println("Case #" + (i + 1) + ": ");
                 writer.println("Case #" + (i + 1) + ": " + exercise.resolve(scanner));
             }
         } catch (IOException e) {
