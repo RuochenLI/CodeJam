@@ -12,18 +12,18 @@ public final class OversizedPancakeFlipper implements GoogleJamTemplate {
     public String findSolution(String cakeStr, int k) {
         int count = 0;
         String tmpCakeStr = cakeStr;
-        System.out.println("cakeStr = " + cakeStr);
-        System.out.println("k = " + k);
+//        System.out.println("cakeStr = " + cakeStr);
+//        System.out.println("k = " + k);
         while (!tmpCakeStr.isEmpty() && tmpCakeStr.length() >= k) {
             tmpCakeStr = removeFirstUpCakes(tmpCakeStr);
             if (tmpCakeStr.length() >= k) {
                 count++;
                 tmpCakeStr = flip(tmpCakeStr, k);
-                System.out.println("tmpCakeStr after flip = " + tmpCakeStr);
+//                System.out.println("tmpCakeStr after flip = " + tmpCakeStr);
             }
         }
 
-        System.out.println(tmpCakeStr.isEmpty() ? String.valueOf(count) : "IMPOSSIBLE");
+//        System.out.println(tmpCakeStr.isEmpty() ? String.valueOf(count) : "IMPOSSIBLE");
         return tmpCakeStr.isEmpty() ? String.valueOf(count) : "IMPOSSIBLE";
     }
 

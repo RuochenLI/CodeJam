@@ -23,4 +23,9 @@ public class OversizePancakeFlipperTest {
     public void testCase3() {
         assertEquals("IMPOSSIBLE", new OversizedPancakeFlipper().findSolution("-+-+-", 4));
     }
+
+    @Test
+    public void testCase4() {
+        assertEquals("3", new OversizedPancakeFlipper().findSolution("-+-+-", 3));
+    }
 }
