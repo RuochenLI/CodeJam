@@ -27,7 +27,7 @@ public class BathroomStalls implements GoogleJamTemplate {
 //        printStatus(topLeft, topRight);
         for (int i = 0; i < k - 1; i++) {
             bestPos = findBestPosition(topLeft, topRight);
-            updateList(topLeft, topRight, bestPos);
+            updateList(bestPos);
 //            printStatus(topLeft, topRight);
         }
 
@@ -48,12 +48,12 @@ public class BathroomStalls implements GoogleJamTemplate {
         System.out.println();
     }
 
-    private void updateList(Stall topLeft, Stall topRight, Stall bestPos) {
+    private void updateList(Stall bestPos) {
         bestPos.left = -1;
         bestPos.right = -1;
         Stall pointer = bestPos.leftStall;
         int count = 0;
-        while (pointer != topLeft) {
+        while (pointer.right != -1 && pointer.left != -1) {
             pointer.right = count;
             count++;
             pointer = pointer.leftStall;
@@ -61,7 +61,7 @@ public class BathroomStalls implements GoogleJamTemplate {
 
         pointer = bestPos.rightStall;
         count = 0;
-        while (pointer != topRight) {
+        while (pointer.right != -1 && pointer.left != -1) {
             pointer.left = count;
             count++;
             pointer = pointer.rightStall;

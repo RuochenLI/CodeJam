@@ -34,4 +34,14 @@ public class BathroomStallsTest {
         assertEquals("500 499", new BathroomStalls().findSolution(1000, 1));
     }
 
+    @Test
+    public void testCase6() {
+        assertEquals("0 0", new BathroomStalls().findSolution(280, 259));
+    }
+
+    @Test
+    public void testCase7() {
+        assertEquals("1 0", new BathroomStalls().findSolution(5, 3));
+    }
+
 }
